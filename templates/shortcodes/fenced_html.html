@@ -1,0 +1,16 @@
+{% set iter = body | markdown | split(pat="<hr />") %}
+{% set cpt = 0 %}
+
+{%- for codeblock in iter -%}
+{%- set_global cpt = cpt + 1 -%}
+<div>
+    <h3>block no {{ cpt }}</h3>
+    <h4>Should output:</h4>
+    <code>{{ codeblock }}</code>
+    <h4>Actual output:</h4>
+
+    {{ codeblock | safe }}
+
+</div>
+
+{%- endfor %}

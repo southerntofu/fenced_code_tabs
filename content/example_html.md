@@ -3,19 +3,19 @@ title = "Fenced code tab usage example"
 +++
 
 
-{% fenced_code_tab() %}
+{% fenced_html() %}
 
 ```rust
 prinln!("Hello World!");
 ```
 
-<hr />
+---
 
 ```C
 prinf("Hello World!\n");
 ```
 
----
+-----
 
 ```java
 system.out.println("Hello World!");
